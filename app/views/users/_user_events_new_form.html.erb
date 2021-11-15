@@ -1,49 +1,27 @@
-<!-- Form event start -->
 <%= form_with(model: @event, local: true) do |f| %>
-<!-- Form event end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Input for user_id start -->
   <%= f.hidden_field :user_id, value: @user.id %>
-  <!-- Input for user_id end -->
-  <!-- Label and input for user_id end -->
 
-  <!-- Label and input for start_time start -->
   <div class="form-group">
     <%= f.label :start_time %>
-    <!-- Input for start_time start -->
     <%= f.datetime_select :start_time, class: "form-control" %>
-    <!-- Input for start_time end -->
   </div>
-  <!-- Label and input for start_time end -->
 
-  <!-- Label and input for end_time start -->
   <div class="form-group">
     <%= f.label :end_time %>
-    <!-- Input for end_time start -->
     <%= f.datetime_select :end_time, class: "form-control" %>
-    <!-- Input for end_time end -->
   </div>
-  <!-- Label and input for end_time end -->
 
-  <!-- Label and input for location start -->
   <div class="form-group">
     <%= f.label :location %>
 
-    <!-- Input for location start -->
     <%= f.text_field :location, class: "form-control" %>
-    <!-- Input for location end -->
   </div>
-  <!-- Label and input for location end -->
 
-  <!-- Label and input for details start -->
   <div class="form-group">
     <%= f.label :details %>
-    <!-- Input for details start -->
     <%= f.text_area :details, rows: "3", class: "form-control" %>
-    <!-- Input for details end -->
   </div>
-  <!-- Label and input for details end -->
 
   <%= f.submit "Create event", class: "btn btn-block btn-outline-secondary" %>
 <% end %>
