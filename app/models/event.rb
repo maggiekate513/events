@@ -2,7 +2,7 @@ class Event < ApplicationRecord
   # Direct associations
 
   has_many   :comments,
-             :dependent => :destroy
+             dependent: :destroy
 
   belongs_to :user
 
@@ -15,5 +15,4 @@ class Event < ApplicationRecord
   def to_s
     user.to_s
   end
-
 end
