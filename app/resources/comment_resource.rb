@@ -7,6 +7,8 @@ class CommentResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :event
+
   belongs_to :user
 
   # Indirect associations
